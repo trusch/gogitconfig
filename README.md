@@ -4,8 +4,15 @@ a simple "git config" interface for golang with set/get/unset and global support
 ## Example
 
 ```golang
+package main
+
+import(
+	"github.com/trusch/gogitconfig"
+	"log"
+)
+
 func main() {
-	configValue := New("test.value")
+	configValue := gogitconfig.New("test.value")
 	v, err := configValue.Get()
 	if err != nil {
 		log.Println("error in Get:", err.Error())
